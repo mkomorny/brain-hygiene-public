@@ -1,0 +1,48 @@
+HOW TO USE: brain-hygiene
+=========================
+
+PURPOSE
+  Audit your Second Brain knowledge base for duplicate, fragmented, or outdated
+  memories on a specific project, and organize them with a clean consolidation
+  and deprecation plan.
+
+CAPABILITIES
+  - Scans up to 20 memories across a topic or project tag
+  - Identifies near-duplicate memories created across different sessions
+  - Detects obsolete advice that has been superseded by newer work
+  - Flags entries ready to be marked deprecated or canonical
+  - Executes batch cleanup and status updates with your confirmation
+
+USE CASES
+  - Cleaning up a project's memory store after several weeks of rapid iteration
+  - Eliminating duplicate memories that clutter `/brain-recall` results
+  - Locking down mature architectural rules by promoting them to `canonical`
+
+IDEAS
+  - Run `/brain-hygiene <project>` once a month to keep recall fast and high-signal
+  - Deprecating entries keeps your history intact while preventing search pollution
+
+PROMPTS YOU CAN PASTE
+  /brain-hygiene Live Actions
+
+  /brain-hygiene audio-tools
+
+  /brain-hygiene preferences
+
+EXAMPLE FLOW
+  You:   /brain-hygiene Live Actions
+  Agent: [Scans 18 memories for Live Actions]
+         🧹 Brain Hygiene Report: Live Actions
+         ⚠️ Duplicates Found:
+           - mem_12a and mem_88f both document OSC port 9001 setup
+           → Suggestion: Merge into mem_12a, deprecate mem_88f
+         ⭐ Canonical Candidates:
+           - mem_45b (Live 12 Standard constraint) → promote to canonical
+         Execute this cleanup plan?
+  You:   yes
+  Agent: [Calls set_status on both memories immediately, confirms updated]
+
+DEFAULT GOALS IF YOU DON'T NAME ONE
+  1. Retrieve memories for topic with broad topK
+  2. Audit for duplicates, obsolete advice, and status gaps
+  3. Output structured consolidation and status update plan
